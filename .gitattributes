@@ -1,0 +1,6 @@
+# Preserve exact bytes used by source/context hashes and recorded run evidence.
+# Linux evidence uses LF; supplied Windows evidence uses CRLF. Do not normalize.
+data/fixtures/** -text
+context/** -text
+docs/evidence/** -text
+docs/windows_evidence/** -text
