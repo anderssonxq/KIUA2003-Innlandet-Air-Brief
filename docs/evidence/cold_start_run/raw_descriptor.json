@@ -1,0 +1,30 @@
+{
+  "variables": {
+    "AQI": {
+      "aqis": [
+        {
+          "class": 1,
+          "to": 2.0,
+          "text_NO": "lite"
+        },
+        {
+          "class": 2,
+          "from": 2.0,
+          "to": 3.0,
+          "text_NO": "moderat"
+        },
+        {
+          "class": 3,
+          "from": 3.0,
+          "to": 4.0,
+          "text_NO": "høy"
+        },
+        {
+          "class": 4,
+          "from": 4.0,
+          "text_NO": "svært høy"
+        }
+      ]
+    }
+  }
+}

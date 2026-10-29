@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "Hamar_3403_Innlandet_34",
+    "reference_age_0_to_48h",
+    "complete_local_calendar_day",
+    "distinct_hourly_timestamps",
+    "finite_AQI_and_units",
+    "official_descriptor_boundaries",
+    "source_linked_recomputed_facts",
+    "enforced_one_call_token_budget",
+    "exact_decision_fields",
+    "allowed_opening",
+    "three_distinct_fact_ids",
+    "required_peak_and_coverage",
+    "all_fact_references_exist",
+    "loaded_schema_conformance"
+  ],
+  "hour_count": 24
+}

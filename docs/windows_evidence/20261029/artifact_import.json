@@ -1,0 +1,230 @@
+{
+  "archive": "windows01_evidence.zip",
+  "archive_sha256": "24b612d5136bca5bdcc3171af4f92ddc81a838ebfe93d36d666b37bb46f10378",
+  "archive_bytes": 10417,
+  "member_count": 14,
+  "extraction_note": "ZIP member backslashes normalized to directory separators; all file payload bytes preserved.",
+  "members": [
+    {
+      "zip_member": "windows01\\agent_response.json",
+      "normalized_path": "windows01/agent_response.json",
+      "bytes": 976,
+      "sha256": "5de5080174b3ae3ba7aa15fae9fbfbbd3c7d385255bce8fa7789b95ea831a5d2"
+    },
+    {
+      "zip_member": "windows01\\budget.json",
+      "normalized_path": "windows01/budget.json",
+      "bytes": 435,
+      "sha256": "de3161a13c6670ecaeb5823284acf760f7cc6c334d89d9c59a71df98d5ea3b47"
+    },
+    {
+      "zip_member": "windows01\\bulletin.json",
+      "normalized_path": "windows01/bulletin.json",
+      "bytes": 2531,
+      "sha256": "449f629f6e85eb3e44005b1ab6b7e7d2bd228981541e0a212360e944b1864a9d"
+    },
+    {
+      "zip_member": "windows01\\bulletin.md",
+      "normalized_path": "windows01/bulletin.md",
+      "bytes": 1041,
+      "sha256": "56d9463643eda93c88ed7918c29ab1f33da03c091330e619c062b1dae35d52bf"
+    },
+    {
+      "zip_member": "windows01\\context_manifest.json",
+      "normalized_path": "windows01/context_manifest.json",
+      "bytes": 355,
+      "sha256": "b90c788ac8ed3aac87bc318654d1198279b7d596bd32c278b6ca40787802d238"
+    },
+    {
+      "zip_member": "windows01\\decision.json",
+      "normalized_path": "windows01/decision.json",
+      "bytes": 99,
+      "sha256": "db62f54cfc65b11d49db3724ca200f62db781f7c62380d0695f18d6bd1875048"
+    },
+    {
+      "zip_member": "windows01\\decision_schema.json",
+      "normalized_path": "windows01/decision_schema.json",
+      "bytes": 1393,
+      "sha256": "abd3178f14cf6c9cc07227c3ad95a286114ccdb8ca573aa502b67ed7516820bf"
+    },
+    {
+      "zip_member": "windows01\\facts.json",
+      "normalized_path": "windows01/facts.json",
+      "bytes": 1684,
+      "sha256": "5d9d9fc8d82b61cd8bf640215c6d81465f8023438116ef985cbaa6f236af90ff"
+    },
+    {
+      "zip_member": "windows01\\normalized.json",
+      "normalized_path": "windows01/normalized.json",
+      "bytes": 6152,
+      "sha256": "c610c9aaebd71df2e5e0d3059ad16a84fa2356c57434c58ec20112deffb48593"
+    },
+    {
+      "zip_member": "windows01\\prompt.txt",
+      "normalized_path": "windows01/prompt.txt",
+      "bytes": 4259,
+      "sha256": "9c75e00541b5be610d4bddf0de24af785bb377c1915be5cc6cf7a4d1876635b9"
+    },
+    {
+      "zip_member": "windows01\\raw_descriptor.json",
+      "normalized_path": "windows01/raw_descriptor.json",
+      "bytes": 523,
+      "sha256": "0fbd590d6085ae2337e243e110d0d62b672ba947f1043859f1f89f8625e06d5e"
+    },
+    {
+      "zip_member": "windows01\\raw_forecast.json",
+      "normalized_path": "windows01/raw_forecast.json",
+      "bytes": 20759,
+      "sha256": "e7cb47fe8fa51196ea5da5c0f3dca324f5268703d73210cd34754cbf4bc5841b"
+    },
+    {
+      "zip_member": "windows01\\source_manifest.json",
+      "normalized_path": "windows01/source_manifest.json",
+      "bytes": 1197,
+      "sha256": "27e390f355d6fdb69da1c504a6f62aa12ed3d3a9876c6c785cd49d38d6a4d645"
+    },
+    {
+      "zip_member": "windows01\\validation.json",
+      "normalized_path": "windows01/validation.json",
+      "bytes": 534,
+      "sha256": "da1b6d18bb94ed7b07486524f34fe109adadb5dfef220e0c908f0f7f3c1d1a63"
+    }
+  ],
+  "received_date": "2026-10-29",
+  "packaged_directory": "docs/evidence/windows_run",
+  "original_upload_preserved": true,
+  "original_archive_in_repository": false,
+  "reason_original_archive_not_packaged": "Its model metadata includes an identifying local profile path.",
+  "file_payloads": [
+    {
+      "name": "agent_response.json",
+      "original_bytes": 976,
+      "original_sha256": "5de5080174b3ae3ba7aa15fae9fbfbbd3c7d385255bce8fa7789b95ea831a5d2",
+      "packaged_bytes": 864,
+      "packaged_sha256": "1824db518344cb3f15855d4c595275dd64c138b045a179823080817d15c715fd",
+      "byte_identical": false,
+      "redaction": {
+        "json_pointer": "/model",
+        "replacement": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+        "reason": "Omit identifying local Windows profile/download path from repository copy."
+      }
+    },
+    {
+      "name": "budget.json",
+      "original_bytes": 435,
+      "original_sha256": "de3161a13c6670ecaeb5823284acf760f7cc6c334d89d9c59a71df98d5ea3b47",
+      "packaged_bytes": 435,
+      "packaged_sha256": "de3161a13c6670ecaeb5823284acf760f7cc6c334d89d9c59a71df98d5ea3b47",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "bulletin.json",
+      "original_bytes": 2531,
+      "original_sha256": "449f629f6e85eb3e44005b1ab6b7e7d2bd228981541e0a212360e944b1864a9d",
+      "packaged_bytes": 2531,
+      "packaged_sha256": "449f629f6e85eb3e44005b1ab6b7e7d2bd228981541e0a212360e944b1864a9d",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "bulletin.md",
+      "original_bytes": 1041,
+      "original_sha256": "56d9463643eda93c88ed7918c29ab1f33da03c091330e619c062b1dae35d52bf",
+      "packaged_bytes": 1041,
+      "packaged_sha256": "56d9463643eda93c88ed7918c29ab1f33da03c091330e619c062b1dae35d52bf",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "context_manifest.json",
+      "original_bytes": 355,
+      "original_sha256": "b90c788ac8ed3aac87bc318654d1198279b7d596bd32c278b6ca40787802d238",
+      "packaged_bytes": 355,
+      "packaged_sha256": "b90c788ac8ed3aac87bc318654d1198279b7d596bd32c278b6ca40787802d238",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "decision.json",
+      "original_bytes": 99,
+      "original_sha256": "db62f54cfc65b11d49db3724ca200f62db781f7c62380d0695f18d6bd1875048",
+      "packaged_bytes": 99,
+      "packaged_sha256": "db62f54cfc65b11d49db3724ca200f62db781f7c62380d0695f18d6bd1875048",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "decision_schema.json",
+      "original_bytes": 1393,
+      "original_sha256": "abd3178f14cf6c9cc07227c3ad95a286114ccdb8ca573aa502b67ed7516820bf",
+      "packaged_bytes": 1393,
+      "packaged_sha256": "abd3178f14cf6c9cc07227c3ad95a286114ccdb8ca573aa502b67ed7516820bf",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "facts.json",
+      "original_bytes": 1684,
+      "original_sha256": "5d9d9fc8d82b61cd8bf640215c6d81465f8023438116ef985cbaa6f236af90ff",
+      "packaged_bytes": 1684,
+      "packaged_sha256": "5d9d9fc8d82b61cd8bf640215c6d81465f8023438116ef985cbaa6f236af90ff",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "normalized.json",
+      "original_bytes": 6152,
+      "original_sha256": "c610c9aaebd71df2e5e0d3059ad16a84fa2356c57434c58ec20112deffb48593",
+      "packaged_bytes": 6152,
+      "packaged_sha256": "c610c9aaebd71df2e5e0d3059ad16a84fa2356c57434c58ec20112deffb48593",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "prompt.txt",
+      "original_bytes": 4259,
+      "original_sha256": "9c75e00541b5be610d4bddf0de24af785bb377c1915be5cc6cf7a4d1876635b9",
+      "packaged_bytes": 4259,
+      "packaged_sha256": "9c75e00541b5be610d4bddf0de24af785bb377c1915be5cc6cf7a4d1876635b9",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "raw_descriptor.json",
+      "original_bytes": 523,
+      "original_sha256": "0fbd590d6085ae2337e243e110d0d62b672ba947f1043859f1f89f8625e06d5e",
+      "packaged_bytes": 523,
+      "packaged_sha256": "0fbd590d6085ae2337e243e110d0d62b672ba947f1043859f1f89f8625e06d5e",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "raw_forecast.json",
+      "original_bytes": 20759,
+      "original_sha256": "e7cb47fe8fa51196ea5da5c0f3dca324f5268703d73210cd34754cbf4bc5841b",
+      "packaged_bytes": 20759,
+      "packaged_sha256": "e7cb47fe8fa51196ea5da5c0f3dca324f5268703d73210cd34754cbf4bc5841b",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "source_manifest.json",
+      "original_bytes": 1197,
+      "original_sha256": "27e390f355d6fdb69da1c504a6f62aa12ed3d3a9876c6c785cd49d38d6a4d645",
+      "packaged_bytes": 1197,
+      "packaged_sha256": "27e390f355d6fdb69da1c504a6f62aa12ed3d3a9876c6c785cd49d38d6a4d645",
+      "byte_identical": true,
+      "redaction": null
+    },
+    {
+      "name": "validation.json",
+      "original_bytes": 534,
+      "original_sha256": "da1b6d18bb94ed7b07486524f34fe109adadb5dfef220e0c908f0f7f3c1d1a63",
+      "packaged_bytes": 534,
+      "packaged_sha256": "da1b6d18bb94ed7b07486524f34fe109adadb5dfef220e0c908f0f7f3c1d1a63",
+      "byte_identical": true,
+      "redaction": null
+    }
+  ]
+}

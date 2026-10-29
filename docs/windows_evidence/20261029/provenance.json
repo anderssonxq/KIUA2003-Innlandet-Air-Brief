@@ -1,0 +1,34 @@
+{
+  "evidence_type": "user_supplied_terminal_transcript_and_run_artifacts",
+  "received_date": "2026-10-29",
+  "run_timestamp": null,
+  "platform_reported": "Windows PowerShell",
+  "os_version_independently_verified": false,
+  "assistant_executed_on_windows": false,
+  "original_run_artifacts_received": true,
+  "source_mode_reported": "fixture",
+  "target_date_reported": "2026-10-28",
+  "output_path_reported": "data/output/windows01",
+  "reported_tokens": {
+    "prompt": 1172,
+    "completion": 23,
+    "total": 1195,
+    "cap": 4096
+  },
+  "token_arithmetic_checked": true,
+  "pipeline_checks_reported_passed": 14,
+  "separate_verifier_reported_passed": true,
+  "new_windows_MET_fetch_demonstrated": false,
+  "transcript_redactions": [
+    "Local user-profile/download path replaced by <project-root>"
+  ],
+  "transcript_normalization": [
+    "Trailing whitespace removed; line endings normalized"
+  ],
+  "artifact_received_date": "2026-10-29",
+  "artifact_review": "artifact_review/consistency_checks.json",
+  "artifact_import": "artifact_import.json",
+  "artifact_verification_platform": "Linux",
+  "artifact_verification_passed": true,
+  "packaged_model_path_redacted": true
+}

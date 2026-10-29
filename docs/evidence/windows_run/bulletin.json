@@ -1,0 +1,83 @@
+{
+  "title": "Luftkvalitetsvarsel for Hamar – 2026-10-28",
+  "municipality_code": "3403",
+  "county_code": "34",
+  "target_date": "2026-10-28",
+  "timezone": "Europe/Oslo",
+  "hours_expected": 24,
+  "status": "draft_requires_human_review",
+  "source_mode": "fixture",
+  "as_of": "2026-10-27T16:25:25+00:00",
+  "reference_time": "2026-10-27T06:00:00+00:00",
+  "opening": "Her er en kort oversikt over luftkvalitetsvarselet.",
+  "items": [
+    {
+      "fact_id": "coverage",
+      "text": "Datagrunnlaget dekker 24 timer, fra 2026-10-28T00:00:00+01:00 til 2026-10-28T23:00:00+01:00 (Europe/Oslo).",
+      "evidence": {
+        "hours": 24,
+        "first": "2026-10-28T00:00:00+01:00",
+        "last": "2026-10-28T23:00:00+01:00",
+        "source_rows": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      }
+    },
+    {
+      "fact_id": "peak",
+      "text": "Høyeste varslede AQI er 1,839 ved 2026-10-28T17:00:00+01:00, kategori «lite».",
+      "evidence": {
+        "source_row": 28,
+        "time_utc": "2026-10-28T16:00:00+00:00",
+        "time_local": "2026-10-28T17:00:00+01:00",
+        "aqi": 1.8386796712875366,
+        "class": 1,
+        "category_no": "lite"
+      }
+    },
+    {
+      "fact_id": "minimum",
+      "text": "Laveste varslede AQI er 1,635 ved 2026-10-28T00:00:00+01:00, kategori «lite».",
+      "evidence": {
+        "source_row": 11,
+        "time_utc": "2026-10-27T23:00:00+00:00",
+        "time_local": "2026-10-28T00:00:00+01:00",
+        "aqi": 1.6353236436843872,
+        "class": 1,
+        "category_no": "lite"
+      }
+    }
+  ],
+  "source_url": "https://api.met.no/weatherapi/airqualityforecast/0.1/?lat=60.7945&lon=11.0679&areaclass=kommune&filter_vars=AQI",
+  "attribution": "Data fra MET Norway, CC BY 4.0. Bearbeidet og forkortet.",
+  "limitations": [
+    "Historisk eksempel fra en lagret kildefil; ikke et oppdatert varsel.",
+    "Dette er et modellberegnet varsel, ikke målinger.",
+    "Kommunedata beskriver ikke nødvendigvis luften på et bestemt sted.",
+    "AQI vises med tre desimaler; kategori er beregnet fra uavrundet verdi.",
+    "Dette utkastet gir ingen individuelle helseråd."
+  ]
+}

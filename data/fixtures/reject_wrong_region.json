@@ -1,0 +1,887 @@
+{
+  "meta": {
+    "reftime": "2026-10-27T06:00:00Z",
+    "location": {
+      "name": "Hamar",
+      "areaclass": "kommune",
+      "longitude": "11.06790",
+      "latitude": "60.79450",
+      "path": "Innlandet/Hamar",
+      "areacode": "0301",
+      "superareacode": "34"
+    },
+    "superlocation": {
+      "name": "Innlandet",
+      "areaclass": "fylke",
+      "path": "Innlandet",
+      "areacode": "34"
+    },
+    "sublocations": [
+      {
+        "name": "Hamar Vest",
+        "areaclass": "delomrade",
+        "longitude": "11.01319",
+        "latitude": "60.81347",
+        "path": "Innlandet/Hamar/Hamar Vest",
+        "areacode": "34030100",
+        "superareacode": "3403"
+      },
+      {
+        "name": "Storhamar",
+        "areaclass": "delomrade",
+        "longitude": "11.03730",
+        "latitude": "60.78899",
+        "path": "Innlandet/Hamar/Storhamar",
+        "areacode": "34030200",
+        "superareacode": "3403"
+      },
+      {
+        "name": "Hamar Nord",
+        "areaclass": "delomrade",
+        "longitude": "11.05550",
+        "latitude": "60.81070",
+        "path": "Innlandet/Hamar/Hamar Nord",
+        "areacode": "34030300",
+        "superareacode": "3403"
+      },
+      {
+        "name": "Midtbyen",
+        "areaclass": "delomrade",
+        "longitude": "11.07206",
+        "latitude": "60.79398",
+        "path": "Innlandet/Hamar/Midtbyen",
+        "areacode": "34030400",
+        "superareacode": "3403"
+      },
+      {
+        "name": "Hamar Øst",
+        "areaclass": "delomrade",
+        "longitude": "11.09327",
+        "latitude": "60.79869",
+        "path": "Innlandet/Hamar/Hamar Øst",
+        "areacode": "34030500",
+        "superareacode": "3403"
+      },
+      {
+        "name": "Vang Vest",
+        "areaclass": "delomrade",
+        "longitude": "11.11413",
+        "latitude": "60.83083",
+        "path": "Innlandet/Hamar/Vang Vest",
+        "areacode": "34030600",
+        "superareacode": "3403"
+      },
+      {
+        "name": "Vang Midtre",
+        "areaclass": "delomrade",
+        "longitude": "11.13054",
+        "latitude": "60.80339",
+        "path": "Innlandet/Hamar/Vang Midtre",
+        "areacode": "34030700",
+        "superareacode": "3403"
+      },
+      {
+        "name": "Vang Øst",
+        "areaclass": "delomrade",
+        "longitude": "11.19439",
+        "latitude": "60.80588",
+        "path": "Innlandet/Hamar/Vang Øst",
+        "areacode": "34030800",
+        "superareacode": "3403"
+      },
+      {
+        "name": "Vang Nord",
+        "areaclass": "delomrade",
+        "longitude": "11.17137",
+        "latitude": "61.02233",
+        "path": "Innlandet/Hamar/Vang Nord",
+        "areacode": "34030900",
+        "superareacode": "3403"
+      }
+    ]
+  },
+  "data": {
+    "time": [
+      {
+        "from": "2026-10-27T12:00:00Z",
+        "to": "2026-10-27T12:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.608568549156189,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T13:00:00Z",
+        "to": "2026-10-27T13:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6113470792770386,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T14:00:00Z",
+        "to": "2026-10-27T14:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.61931312084198,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T15:00:00Z",
+        "to": "2026-10-27T15:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6049457788467407,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T16:00:00Z",
+        "to": "2026-10-27T16:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.5437946319580078,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T17:00:00Z",
+        "to": "2026-10-27T17:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.4994319677352905,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T18:00:00Z",
+        "to": "2026-10-27T18:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.4931917190551758,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T19:00:00Z",
+        "to": "2026-10-27T19:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.4948561191558838,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T20:00:00Z",
+        "to": "2026-10-27T20:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.5502129793167114,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T21:00:00Z",
+        "to": "2026-10-27T21:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6209580898284912,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T22:00:00Z",
+        "to": "2026-10-27T22:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6325747966766357,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T23:00:00Z",
+        "to": "2026-10-27T23:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6353236436843872,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T00:00:00Z",
+        "to": "2026-10-28T00:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6528680324554443,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T01:00:00Z",
+        "to": "2026-10-28T01:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6719486713409424,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T02:00:00Z",
+        "to": "2026-10-28T02:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6841334104537964,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T03:00:00Z",
+        "to": "2026-10-28T03:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6696362495422363,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T04:00:00Z",
+        "to": "2026-10-28T04:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.673403024673462,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T05:00:00Z",
+        "to": "2026-10-28T05:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.682613492012024,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T06:00:00Z",
+        "to": "2026-10-28T06:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6888959407806396,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T07:00:00Z",
+        "to": "2026-10-28T07:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7048075199127197,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T08:00:00Z",
+        "to": "2026-10-28T08:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7015489339828491,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T09:00:00Z",
+        "to": "2026-10-28T09:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7300121784210205,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T10:00:00Z",
+        "to": "2026-10-28T10:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7408620119094849,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T11:00:00Z",
+        "to": "2026-10-28T11:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.756230354309082,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T12:00:00Z",
+        "to": "2026-10-28T12:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7672743797302246,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T13:00:00Z",
+        "to": "2026-10-28T13:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7533900737762451,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T14:00:00Z",
+        "to": "2026-10-28T14:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.743829369544983,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T15:00:00Z",
+        "to": "2026-10-28T15:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.8234124183654785,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T16:00:00Z",
+        "to": "2026-10-28T16:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.8386796712875366,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T17:00:00Z",
+        "to": "2026-10-28T17:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.71134352684021,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T18:00:00Z",
+        "to": "2026-10-28T18:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6963965892791748,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T19:00:00Z",
+        "to": "2026-10-28T19:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6871932744979858,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T20:00:00Z",
+        "to": "2026-10-28T20:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6791187524795532,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T21:00:00Z",
+        "to": "2026-10-28T21:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.677685260772705,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T22:00:00Z",
+        "to": "2026-10-28T22:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6796177625656128,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-28T23:00:00Z",
+        "to": "2026-10-28T23:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6830151081085205,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T00:00:00Z",
+        "to": "2026-10-29T00:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6796810626983643,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T01:00:00Z",
+        "to": "2026-10-29T01:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6603349447250366,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T02:00:00Z",
+        "to": "2026-10-29T02:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6413379907608032,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T03:00:00Z",
+        "to": "2026-10-29T03:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6498594284057617,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T04:00:00Z",
+        "to": "2026-10-29T04:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6501295566558838,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T05:00:00Z",
+        "to": "2026-10-29T05:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.630316138267517,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T06:00:00Z",
+        "to": "2026-10-29T06:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.5934351682662964,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T07:00:00Z",
+        "to": "2026-10-29T07:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6045644283294678,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T08:00:00Z",
+        "to": "2026-10-29T08:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6125351190567017,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T09:00:00Z",
+        "to": "2026-10-29T09:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6089853048324585,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T10:00:00Z",
+        "to": "2026-10-29T10:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.628574252128601,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T11:00:00Z",
+        "to": "2026-10-29T11:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.658260703086853,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T12:00:00Z",
+        "to": "2026-10-29T12:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6604421138763428,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T13:00:00Z",
+        "to": "2026-10-29T13:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6589505672454834,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T14:00:00Z",
+        "to": "2026-10-29T14:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.6536386013031006,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T15:00:00Z",
+        "to": "2026-10-29T15:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.986340880393982,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T16:00:00Z",
+        "to": "2026-10-29T16:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7723908424377441,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T17:00:00Z",
+        "to": "2026-10-29T17:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7848087549209595,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-29T18:00:00Z",
+        "to": "2026-10-29T18:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.803985357284546,
+            "units": "1"
+          }
+        },
+        "reason": {
+          "variables": [],
+          "sources": []
+        }
+      },
+      {
+        "from": "2026-10-27T23:00:00Z",
+        "to": "2026-10-28T22:00:00Z",
+        "variables": {
+          "AQI": {
+            "value": 1.7672743797302246,
+            "units": "1"
+          }
+        }
+      }
+    ]
+  }
+}

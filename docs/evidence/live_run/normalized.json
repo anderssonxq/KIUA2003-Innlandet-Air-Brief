@@ -1,0 +1,232 @@
+{
+  "location": "Hamar",
+  "municipality_code": "3403",
+  "county": "Innlandet",
+  "date": "2026-10-28",
+  "timezone": "Europe/Oslo",
+  "as_of": "2026-10-27T16:35:11.417736+00:00",
+  "reference_time": "2026-10-27T06:00:00+00:00",
+  "hours_expected": 24,
+  "interval_rows_ignored": 1,
+  "source_url": "https://api.met.no/weatherapi/airqualityforecast/0.1/?lat=60.7945&lon=11.0679&areaclass=kommune&filter_vars=AQI",
+  "classes": [
+    {
+      "class": 1,
+      "lower": 1.0,
+      "upper": 2.0,
+      "label_no": "lite"
+    },
+    {
+      "class": 2,
+      "lower": 2.0,
+      "upper": 3.0,
+      "label_no": "moderat"
+    },
+    {
+      "class": 3,
+      "lower": 3.0,
+      "upper": 4.0,
+      "label_no": "høy"
+    },
+    {
+      "class": 4,
+      "lower": 4.0,
+      "upper": 5.0,
+      "label_no": "svært høy"
+    }
+  ],
+  "hours": [
+    {
+      "source_row": 11,
+      "time_utc": "2026-10-27T23:00:00+00:00",
+      "time_local": "2026-10-28T00:00:00+01:00",
+      "aqi": 1.6353236436843872,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 12,
+      "time_utc": "2026-10-28T00:00:00+00:00",
+      "time_local": "2026-10-28T01:00:00+01:00",
+      "aqi": 1.6528680324554443,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 13,
+      "time_utc": "2026-10-28T01:00:00+00:00",
+      "time_local": "2026-10-28T02:00:00+01:00",
+      "aqi": 1.6719486713409424,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 14,
+      "time_utc": "2026-10-28T02:00:00+00:00",
+      "time_local": "2026-10-28T03:00:00+01:00",
+      "aqi": 1.6841334104537964,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 15,
+      "time_utc": "2026-10-28T03:00:00+00:00",
+      "time_local": "2026-10-28T04:00:00+01:00",
+      "aqi": 1.6696362495422363,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 16,
+      "time_utc": "2026-10-28T04:00:00+00:00",
+      "time_local": "2026-10-28T05:00:00+01:00",
+      "aqi": 1.673403024673462,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 17,
+      "time_utc": "2026-10-28T05:00:00+00:00",
+      "time_local": "2026-10-28T06:00:00+01:00",
+      "aqi": 1.682613492012024,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 18,
+      "time_utc": "2026-10-28T06:00:00+00:00",
+      "time_local": "2026-10-28T07:00:00+01:00",
+      "aqi": 1.6888959407806396,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 19,
+      "time_utc": "2026-10-28T07:00:00+00:00",
+      "time_local": "2026-10-28T08:00:00+01:00",
+      "aqi": 1.7048075199127197,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 20,
+      "time_utc": "2026-10-28T08:00:00+00:00",
+      "time_local": "2026-10-28T09:00:00+01:00",
+      "aqi": 1.7015489339828491,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 21,
+      "time_utc": "2026-10-28T09:00:00+00:00",
+      "time_local": "2026-10-28T10:00:00+01:00",
+      "aqi": 1.7300121784210205,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 22,
+      "time_utc": "2026-10-28T10:00:00+00:00",
+      "time_local": "2026-10-28T11:00:00+01:00",
+      "aqi": 1.7408620119094849,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 23,
+      "time_utc": "2026-10-28T11:00:00+00:00",
+      "time_local": "2026-10-28T12:00:00+01:00",
+      "aqi": 1.756230354309082,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 24,
+      "time_utc": "2026-10-28T12:00:00+00:00",
+      "time_local": "2026-10-28T13:00:00+01:00",
+      "aqi": 1.7672743797302246,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 25,
+      "time_utc": "2026-10-28T13:00:00+00:00",
+      "time_local": "2026-10-28T14:00:00+01:00",
+      "aqi": 1.7533900737762451,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 26,
+      "time_utc": "2026-10-28T14:00:00+00:00",
+      "time_local": "2026-10-28T15:00:00+01:00",
+      "aqi": 1.743829369544983,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 27,
+      "time_utc": "2026-10-28T15:00:00+00:00",
+      "time_local": "2026-10-28T16:00:00+01:00",
+      "aqi": 1.8234124183654785,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 28,
+      "time_utc": "2026-10-28T16:00:00+00:00",
+      "time_local": "2026-10-28T17:00:00+01:00",
+      "aqi": 1.8386796712875366,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 29,
+      "time_utc": "2026-10-28T17:00:00+00:00",
+      "time_local": "2026-10-28T18:00:00+01:00",
+      "aqi": 1.71134352684021,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 30,
+      "time_utc": "2026-10-28T18:00:00+00:00",
+      "time_local": "2026-10-28T19:00:00+01:00",
+      "aqi": 1.6963965892791748,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 31,
+      "time_utc": "2026-10-28T19:00:00+00:00",
+      "time_local": "2026-10-28T20:00:00+01:00",
+      "aqi": 1.6871932744979858,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 32,
+      "time_utc": "2026-10-28T20:00:00+00:00",
+      "time_local": "2026-10-28T21:00:00+01:00",
+      "aqi": 1.6791187524795532,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 33,
+      "time_utc": "2026-10-28T21:00:00+00:00",
+      "time_local": "2026-10-28T22:00:00+01:00",
+      "aqi": 1.677685260772705,
+      "class": 1,
+      "category_no": "lite"
+    },
+    {
+      "source_row": 34,
+      "time_utc": "2026-10-28T22:00:00+00:00",
+      "time_local": "2026-10-28T23:00:00+01:00",
+      "aqi": 1.6796177625656128,
+      "class": 1,
+      "category_no": "lite"
+    }
+  ]
+}

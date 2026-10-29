@@ -1,0 +1,14 @@
+{
+  "engine": "local_llama_cpp",
+  "generation_calls_max": 1,
+  "generation_calls_used": 1,
+  "prompt_tokens_max": 3072,
+  "completion_tokens_max": 256,
+  "total_tokens_max": 4096,
+  "api_charge": 0,
+  "note": "Local computation still consumes time, memory and energy; this is a token cap, not a monetary billing claim.",
+  "prompt_tokens": 1172,
+  "completion_tokens": 24,
+  "total_tokens": 1196,
+  "within_cap": true
+}

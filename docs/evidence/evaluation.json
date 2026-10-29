@@ -1,0 +1,108 @@
+{
+  "suite": "starter_mechanical_evaluation",
+  "live_model_exercised": false,
+  "passed": 14,
+  "total": 14,
+  "all_passed": true,
+  "cases": [
+    {
+      "name": "real_hamar_complete_day",
+      "expected": "accept",
+      "actual": "accept",
+      "passed": true,
+      "detail": "all checks passed"
+    },
+    {
+      "name": "fixture_missing_hour",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "Incomplete local day: expected 24 distinct hourly forecasts"
+    },
+    {
+      "name": "fixture_wrong_region",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "Only Hamar municipality 3403 is supported"
+    },
+    {
+      "name": "nonfinite_AQI",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "AQI must be finite and in [1,5)"
+    },
+    {
+      "name": "duplicate_hour",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "Duplicate hourly forecast timestamp"
+    },
+    {
+      "name": "stale_reference",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "Forecast reference is future-dated or older than 48 hours"
+    },
+    {
+      "name": "future_reference",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "Forecast reference is future-dated or older than 48 hours"
+    },
+    {
+      "name": "wrong_AQI_unit",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "AQI must have dimensionless unit 1"
+    },
+    {
+      "name": "synthetic_DST_23_hours",
+      "expected": "accept",
+      "actual": "accept",
+      "passed": true,
+      "detail": "all checks passed"
+    },
+    {
+      "name": "synthetic_DST_25_hours",
+      "expected": "accept",
+      "actual": "accept",
+      "passed": true,
+      "detail": "all checks passed"
+    },
+    {
+      "name": "synthetic_AQI_boundaries",
+      "expected": "accept",
+      "actual": "accept",
+      "passed": true,
+      "detail": "all checks passed"
+    },
+    {
+      "name": "corrupted_decision",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "Unknown fact ID"
+    },
+    {
+      "name": "oversized_context",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "Context exceeds 16 KiB preflight cap"
+    },
+    {
+      "name": "missing_context",
+      "expected": "reject",
+      "actual": "reject",
+      "passed": true,
+      "detail": "Missing context file: task.md"
+    }
+  ],
+  "limitations": "Small deterministic starter suite. It does not demonstrate real LLM quality, HTTP resilience, or completed exam stress testing; see separate real-run evidence."
+}

@@ -1,0 +1,35 @@
+Source: user-supplied PowerShell transcript, received 29 October 2026.
+Redaction: the local user-profile/download path in prompts is replaced by <project-root>.
+The exact execution timestamp was not supplied. Original run files were supplied later; see the separate artifact review.
+
+PS <project-root>> .\.venv\Scripts\python.exe scripts\run_demo.py --source fixture --date 2026-10-28 --output data\output\windows01
+Started pinned local model on loopback.
+[2/5] Normalize and check geographic/time coverage
+      24 hourly records; 1 interval record(s) excluded
+[4/5] Run one schema-constrained local model inference
+      tokens: prompt=1172 completion=23 total=1195/4096
+[5/5] Validate decision and render local draft
+PASS: 14 checks; draft saved to data\output\windows01\bulletin.md
+PASS: saved output recomputed against saved source; no model call made
+PS <project-root>> .\.venv\Scripts\python.exe -m src.verify --output data\output\windows01
+PASS: saved output recomputed against saved source; no model call made
+PS <project-root>> Get-Content data\output\windows01\bulletin.md -Encoding utf8
+# Luftkvalitetsvarsel for Hamar – 2026-10-28
+
+**Utkast – må gjennomgås av et menneske.**
+
+Her er en kort oversikt over luftkvalitetsvarselet.
+
+- Datagrunnlaget dekker 24 timer, fra 2026-10-28T00:00:00+01:00 til 2026-10-28T23:00:00+01:00 (Europe/Oslo).
+- Høyeste varslede AQI er 1,839 ved 2026-10-28T17:00:00+01:00, kategori «lite».
+- Laveste varslede AQI er 1,635 ved 2026-10-28T00:00:00+01:00, kategori «lite».
+
+Modellens referansetid: 2026-10-27T06:00:00+00:00.
+
+Historisk eksempel fra en lagret kildefil; ikke et oppdatert varsel.
+Dette er et modellberegnet varsel, ikke målinger.
+Kommunedata beskriver ikke nødvendigvis luften på et bestemt sted.
+AQI vises med tre desimaler; kategori er beregnet fra uavrundet verdi.
+Dette utkastet gir ingen individuelle helseråd.
+
+Data fra MET Norway, CC BY 4.0. Bearbeidet og forkortet. [Kilde](https://api.met.no/weatherapi/airqualityforecast/0.1/?lat=60.7945&lon=11.0679&areaclass=kommune&filter_vars=AQI) · [Lisens](https://creativecommons.org/licenses/by/4.0/)

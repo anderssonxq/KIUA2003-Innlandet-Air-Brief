@@ -1,0 +1,33 @@
+{
+  "mode": "live",
+  "forecast": {
+    "url": "https://api.met.no/weatherapi/airqualityforecast/0.1/?lat=60.7945&lon=11.0679&areaclass=kommune&filter_vars=AQI",
+    "status": 200,
+    "retrieved_at": "2026-10-27T16:35:11.417888+00:00",
+    "expires": "Tue, 27 Oct 2026 16:40:23 GMT",
+    "last_modified": "Tue, 27 Oct 2026 16:35:11 GMT",
+    "sha256": "e588f353fb2fe62a485bd0baa1d4f080c5619b1d3cfd7b3728d7454e40601666",
+    "bytes": 10773,
+    "transport": "network_200"
+  },
+  "descriptor": {
+    "url": "https://api.met.no/weatherapi/airqualityforecast/0.1/aqi_description",
+    "status": 200,
+    "retrieved_at": "2026-10-27T16:35:11.877599+00:00",
+    "expires": "Tue, 27 Oct 2026 16:40:44 GMT",
+    "last_modified": "Tue, 27 Oct 2026 16:35:12 GMT",
+    "sha256": "27cfea9cb90450b3352c69b51bb19215159594ebca7ce138ad0a5db0f441a5cc",
+    "bytes": 26068,
+    "transport": "network_200"
+  },
+  "endpoint_requests_max": 2,
+  "redirects_per_endpoint_max": 2,
+  "http_transactions_max": 6,
+  "retry_limit": 0,
+  "requested_date": "2026-10-28",
+  "as_of": "2026-10-27T16:35:11.417736+00:00",
+  "saved_artifact_sha256": {
+    "raw_forecast.json": "2874ade8b2c7432e42fb830268898c4b1558ae13489e17b00d33ac3583960d71",
+    "raw_descriptor.json": "fcb436340507f1c17ba5ea68abc19e8b10bd15df231df3e4ec18fd31052188ee"
+  }
+}

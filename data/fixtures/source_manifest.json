@@ -1,0 +1,18 @@
+{
+  "mode": "fixture",
+  "forecast": {
+    "url": "https://api.met.no/weatherapi/airqualityforecast/0.1/?lat=60.7945&lon=11.0679&areaclass=kommune&filter_vars=AQI",
+    "http_status": 200,
+    "retrieved_at": "2026-10-27T16:25:25Z",
+    "sha256": "e588f353fb2fe62a485bd0baa1d4f080c5619b1d3cfd7b3728d7454e40601666"
+  },
+  "descriptor": {
+    "url": "https://api.met.no/weatherapi/airqualityforecast/0.1/aqi_description",
+    "http_status": 200,
+    "retrieval_date": "2026-10-27",
+    "sha256": "9b7f535c315f3dcc2816e3541d7cd87a3c19d93cb62e8765dee9c23459e6ac44",
+    "transformation": "Only AQI class IDs, bounds and Norwegian category labels retained; no source formula or medical advice retained."
+  },
+  "attribution": "MET Norway; CC BY 4.0; descriptor narrowed and all output transformed",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+}

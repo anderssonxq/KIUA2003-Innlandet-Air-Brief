@@ -1,0 +1,82 @@
+{
+  "type": "object",
+  "properties": {
+    "opening": {
+      "type": "string",
+      "enum": [
+        "overview",
+        "timing"
+      ]
+    },
+    "fact_ids": {
+      "type": "array",
+      "enum": [
+        [
+          "coverage",
+          "peak",
+          "minimum"
+        ],
+        [
+          "coverage",
+          "minimum",
+          "peak"
+        ],
+        [
+          "peak",
+          "coverage",
+          "minimum"
+        ],
+        [
+          "peak",
+          "minimum",
+          "coverage"
+        ],
+        [
+          "minimum",
+          "coverage",
+          "peak"
+        ],
+        [
+          "minimum",
+          "peak",
+          "coverage"
+        ],
+        [
+          "coverage",
+          "peak",
+          "distribution"
+        ],
+        [
+          "coverage",
+          "distribution",
+          "peak"
+        ],
+        [
+          "peak",
+          "coverage",
+          "distribution"
+        ],
+        [
+          "peak",
+          "distribution",
+          "coverage"
+        ],
+        [
+          "distribution",
+          "coverage",
+          "peak"
+        ],
+        [
+          "distribution",
+          "peak",
+          "coverage"
+        ]
+      ]
+    }
+  },
+  "required": [
+    "opening",
+    "fact_ids"
+  ],
+  "additionalProperties": false
+}

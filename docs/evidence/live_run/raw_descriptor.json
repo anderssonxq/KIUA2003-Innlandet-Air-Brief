@@ -1,0 +1,1259 @@
+{
+  "variables": {
+    "pm25_concentration": {
+      "units": "µg/m³",
+      "nameNO": "PM2.5",
+      "nameEN": "PM2.5",
+      "aqi_formula": "\nfunction(x) {\n    let aqi = 1;\n    if ( x < 0. ) {\n        aqi = 1.\n    } else if ( x < 30.0 ) {\n        aqi = (x / 30.0) + 1.;\n    } else if ( x < 50.0 ) {\n        aqi = ((x - 30.0) / (50.0 - 30.0)) + 2.;\n    } else if ( x < 150.0 ) {\n        aqi = ((x - 50.0) / (150.0 - 50.0)) + 3.;\n    } else {\n        aqi = (x / 150.0) + 3.;\n    }\n    \n    if ( aqi > 4.999 ) {\n        aqi = 4.999;\n    }\n    \n    return aqi;\n}\n",
+      "aqis": [
+        {
+          "class": 1,
+          "to": 30.0,
+          "wms_colors": [
+            "#1A801A",
+            "#268A17",
+            "#339415",
+            "#409F13",
+            "#4DA911",
+            "#59B40F",
+            "#66BE0D",
+            "#73C80B",
+            "#80D309",
+            "#8CDD06",
+            "#99E804",
+            "#A6F202"
+          ],
+          "wms_minmax": [
+            0.0,
+            30.0
+          ],
+          "text": "low",
+          "text_NO": "lite",
+          "short_description_NO": "liten helserisiko",
+          "short_description_EN": "little health risk",
+          "description_NO": "Det er lite luftforurensning",
+          "description_EN": "Only light air-pollution",
+          "description_NN": "Det er lite luftforurensning",
+          "color": "#3F9F41"
+        },
+        {
+          "class": 2,
+          "from": 30.0,
+          "to": 50.0,
+          "wms_colors": [
+            "#FFFF00",
+            "#FFF203",
+            "#FFE606",
+            "#FFD90A",
+            "#FFCC0D",
+            "#FFBF10",
+            "#FFB313",
+            "#FFA616"
+          ],
+          "wms_minmax": [
+            30.0,
+            50.0
+          ],
+          "text": "medium",
+          "text_NO": "moderat",
+          "short_description_NO": "moderat helserisiko",
+          "short_description_EN": "moderate health risk",
+          "description_NO": "Utendørs aktivitet anbefales for de fleste",
+          "description_EN": "Outside activities recommended for most",
+          "description_NN": "Utendørs aktivitet anbefales for de fleste",
+          "color": "#FFCB00"
+        },
+        {
+          "class": 3,
+          "from": 50.0,
+          "to": 150.0,
+          "wms_colors": [
+            "#FF591A",
+            "#FC581B",
+            "#FA561C",
+            "#F7541D",
+            "#F5531F",
+            "#F25120",
+            "#F05021",
+            "#ED4E22",
+            "#EB4D24",
+            "#E84B25",
+            "#E64926",
+            "#E34828",
+            "#E04629",
+            "#DE452A",
+            "#DB432B",
+            "#D9412D",
+            "#D6402E",
+            "#D43E2F",
+            "#D13D30",
+            "#CF3B32",
+            "#CC3933",
+            "#C93834",
+            "#C73636",
+            "#C43537",
+            "#C23338",
+            "#BF3139",
+            "#BD303B",
+            "#BA2E3C",
+            "#B82D3D",
+            "#B52B3E",
+            "#B32940",
+            "#B02841",
+            "#AD2642",
+            "#AB2544",
+            "#A82345",
+            "#A62146",
+            "#A32047",
+            "#A11E49",
+            "#9E1D4A",
+            "#9C1B4B"
+          ],
+          "wms_minmax": [
+            50.0,
+            150.0
+          ],
+          "text": "high",
+          "text_NO": "høy",
+          "short_description_NO": "betydelig helserisiko",
+          "short_description_EN": "high health risk",
+          "description_NO": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "description_EN": "Children, pregnant, sick and older people should limit outdoor activities",
+          "description_NN": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "color": "#C13500"
+        },
+        {
+          "class": 4,
+          "from": 150.0,
+          "wms_colors": [
+            "#B300B3",
+            "#AC00B3",
+            "#A600B3",
+            "#9F00B3",
+            "#9900B3",
+            "#9300B3",
+            "#8C00B3",
+            "#8600B3",
+            "#8000B3",
+            "#7900B3",
+            "#7300B3",
+            "#6C00B3",
+            "#6600B3",
+            "#6000B3",
+            "#5900B3",
+            "#5300B3",
+            "#4D00B3",
+            "#4600B3",
+            "#4000B3",
+            "#3900B3",
+            "#3800B3",
+            "#3700B3",
+            "#3600B3",
+            "#3500B3",
+            "#3400B3",
+            "#3300B3",
+            "#3200B3",
+            "#3100B3",
+            "#3000B3",
+            "#2F00B3",
+            "#2E00B3",
+            "#2D00B3",
+            "#2C00B3",
+            "#2B00B3",
+            "#2A00B3",
+            "#2900B3",
+            "#2800B3",
+            "#2700B3",
+            "#2600B3",
+            "#2500B3"
+          ],
+          "wms_minmax": [
+            150.0,
+            250.0
+          ],
+          "text": "very high",
+          "text_NO": "svært høy",
+          "short_description_NO": "alvorlig helserisiko",
+          "short_description_EN": "serious health risk",
+          "description_NO": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "description_EN": "Try not to stay outside for longer periods. In particular, children, pregnant, sick and olderly people must be careful.",
+          "description_NN": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "color": "#4900AC"
+        }
+      ],
+      "aqis_daily_mean": [
+        {
+          "class": 1,
+          "to": 15.0,
+          "text": "low",
+          "text_NO": "lite",
+          "short_description_NO": "liten helserisiko",
+          "short_description_EN": "little health risk",
+          "description_NO": "Det er lite luftforurensning",
+          "description_EN": "Only light air-pollution",
+          "description_NN": "Det er lite luftforurensning",
+          "color": "#3F9F41"
+        },
+        {
+          "class": 2,
+          "from": 15.0,
+          "to": 25.0,
+          "text": "medium",
+          "text_NO": "moderat",
+          "short_description_NO": "moderat helserisiko",
+          "short_description_EN": "moderate health risk",
+          "description_NO": "Utendørs aktivitet anbefales for de fleste",
+          "description_EN": "Outside activities recommended for most",
+          "description_NN": "Utendørs aktivitet anbefales for de fleste",
+          "color": "#FFCB00"
+        },
+        {
+          "class": 3,
+          "from": 25.0,
+          "to": 75.0,
+          "text": "high",
+          "text_NO": "høy",
+          "short_description_NO": "betydelig helserisiko",
+          "short_description_EN": "high health risk",
+          "description_NO": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "description_EN": "Children, pregnant, sick and older people should limit outdoor activities",
+          "description_NN": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "color": "#C13500"
+        },
+        {
+          "class": 4,
+          "from": 75.0,
+          "text": "very high",
+          "text_NO": "svært høy",
+          "short_description_NO": "alvorlig helserisiko",
+          "short_description_EN": "serious health risk",
+          "description_NO": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "description_EN": "Try not to stay outside for longer periods. In particular, children, pregnant, sick and olderly people must be careful.",
+          "description_NN": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "color": "#4900AC"
+        }
+      ],
+      "sources": [
+        {
+          "nameNO": "langtransportert",
+          "nameEN": "long-transport",
+          "units": "%",
+          "source": "pm25_nonlocal_fraction"
+        },
+        {
+          "nameNO": "sjøsalt",
+          "nameEN": "seasalt",
+          "units": "%",
+          "source": "pm25_nonlocal_fraction_seasalt"
+        },
+        {
+          "nameNO": "eksos",
+          "nameEN": "exhaust",
+          "units": "%",
+          "source": "pm25_local_fraction_traffic_exhaust"
+        },
+        {
+          "nameNO": "veistøv",
+          "nameEN": "roaddust",
+          "units": "%",
+          "source": "pm25_local_fraction_traffic_nonexhaust"
+        },
+        {
+          "nameNO": "skip",
+          "nameEN": "shipping",
+          "units": "%",
+          "source": "pm25_local_fraction_shipping"
+        },
+        {
+          "nameNO": "vedfyring",
+          "nameEN": "wood-burning",
+          "units": "%",
+          "source": "pm25_local_fraction_heating"
+        },
+        {
+          "nameNO": "industri",
+          "nameEN": "industry",
+          "units": "%",
+          "source": "pm25_local_fraction_industry"
+        }
+      ]
+    },
+    "pm10_concentration": {
+      "units": "µg/m³",
+      "nameNO": "PM10",
+      "nameEN": "PM10",
+      "aqi_formula": "\nfunction(x) {\n    let aqi = 1;\n    if ( x < 0. ) {\n        aqi = 1.\n    } else if ( x < 60.0 ) {\n        aqi = (x / 60.0) + 1.;\n    } else if ( x < 120.0 ) {\n        aqi = ((x - 60.0) / (120.0 - 60.0)) + 2.;\n    } else if ( x < 400.0 ) {\n        aqi = ((x - 120.0) / (400.0 - 120.0)) + 3.;\n    } else {\n        aqi = (x / 400.0) + 3.;\n    }\n    \n    if ( aqi > 4.999 ) {\n        aqi = 4.999;\n    }\n    \n    return aqi;\n}\n",
+      "aqis": [
+        {
+          "class": 1,
+          "to": 60.0,
+          "wms_colors": [
+            "#1A801A",
+            "#339415",
+            "#4DA911",
+            "#66BE0D",
+            "#80D309",
+            "#99E804"
+          ],
+          "wms_minmax": [
+            0.0,
+            60.0
+          ],
+          "text": "low",
+          "text_NO": "lite",
+          "short_description_NO": "liten helserisiko",
+          "short_description_EN": "little health risk",
+          "description_NO": "Det er lite luftforurensning",
+          "description_EN": "Only light air-pollution",
+          "description_NN": "Det er lite luftforurensning",
+          "color": "#3F9F41"
+        },
+        {
+          "class": 2,
+          "from": 60.0,
+          "to": 120.0,
+          "wms_colors": [
+            "#FFFF00",
+            "#FFEE04",
+            "#FFDD09",
+            "#FFCC0D",
+            "#FFBB11",
+            "#FFAA15"
+          ],
+          "wms_minmax": [
+            60.0,
+            120.0
+          ],
+          "text": "medium",
+          "text_NO": "moderat",
+          "short_description_NO": "moderat helserisiko",
+          "short_description_EN": "moderate health risk",
+          "description_NO": "Utendørs aktivitet anbefales for de fleste",
+          "description_EN": "Outside activities recommended for most",
+          "description_NN": "Utendørs aktivitet anbefales for de fleste",
+          "color": "#FFCB00"
+        },
+        {
+          "class": 3,
+          "from": 120.0,
+          "to": 400.0,
+          "wms_colors": [
+            "#FF591A",
+            "#FB571B",
+            "#F8551D",
+            "#F4521F",
+            "#F05021",
+            "#ED4E23",
+            "#E94C24",
+            "#E64926",
+            "#E24728",
+            "#DE452A",
+            "#DB422C",
+            "#D7402E",
+            "#D33E2F",
+            "#D03C31",
+            "#CC3933",
+            "#C83735",
+            "#C53537",
+            "#C13338",
+            "#BD303A",
+            "#BA2E3C",
+            "#B62C3E",
+            "#B32940",
+            "#AF2742",
+            "#AB2543",
+            "#A82345",
+            "#A42047",
+            "#A01E49",
+            "#9D1C4B"
+          ],
+          "wms_minmax": [
+            120.0,
+            400.0
+          ],
+          "text": "high",
+          "text_NO": "høy",
+          "short_description_NO": "betydelig helserisiko",
+          "short_description_EN": "high health risk",
+          "description_NO": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "description_EN": "Children, pregnant, sick and older people should limit outdoor activities",
+          "description_NN": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "color": "#C13500"
+        },
+        {
+          "class": 4,
+          "from": 400.0,
+          "wms_colors": [
+            "#B300B3",
+            "#AF00B3",
+            "#AC00B3",
+            "#A900B3",
+            "#A600B3",
+            "#A300B3",
+            "#9F00B3",
+            "#9C00B3",
+            "#9900B3",
+            "#9600B3",
+            "#9300B3",
+            "#8F00B3",
+            "#8C00B3",
+            "#8900B3",
+            "#8600B3",
+            "#8300B3",
+            "#8000B3",
+            "#7C00B3",
+            "#7900B3",
+            "#7600B3",
+            "#7300B3",
+            "#7000B3",
+            "#6C00B3",
+            "#6900B3",
+            "#6600B3",
+            "#6300B3",
+            "#6000B3",
+            "#5C00B3",
+            "#5900B3",
+            "#5600B3",
+            "#5300B3",
+            "#5000B3",
+            "#4D00B3",
+            "#4900B3",
+            "#4600B3",
+            "#4300B3",
+            "#4000B3",
+            "#3D00B3",
+            "#3900B3",
+            "#3600B3"
+          ],
+          "wms_minmax": [
+            400.0,
+            800.0
+          ],
+          "text": "very high",
+          "text_NO": "svært høy",
+          "short_description_NO": "alvorlig helserisiko",
+          "short_description_EN": "serious health risk",
+          "description_NO": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "description_EN": "Try not to stay outside for longer periods. In particular, children, pregnant, sick and olderly people must be careful.",
+          "description_NN": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "color": "#4900AC"
+        }
+      ],
+      "aqis_daily_mean": [
+        {
+          "class": 1,
+          "to": 30.0,
+          "text": "low",
+          "text_NO": "lite",
+          "short_description_NO": "liten helserisiko",
+          "short_description_EN": "little health risk",
+          "description_NO": "Det er lite luftforurensning",
+          "description_EN": "Only light air-pollution",
+          "description_NN": "Det er lite luftforurensning",
+          "color": "#3F9F41"
+        },
+        {
+          "class": 2,
+          "from": 30.0,
+          "to": 50.0,
+          "text": "medium",
+          "text_NO": "moderat",
+          "short_description_NO": "moderat helserisiko",
+          "short_description_EN": "moderate health risk",
+          "description_NO": "Utendørs aktivitet anbefales for de fleste",
+          "description_EN": "Outside activities recommended for most",
+          "description_NN": "Utendørs aktivitet anbefales for de fleste",
+          "color": "#FFCB00"
+        },
+        {
+          "class": 3,
+          "from": 50.0,
+          "to": 150.0,
+          "text": "high",
+          "text_NO": "høy",
+          "short_description_NO": "betydelig helserisiko",
+          "short_description_EN": "high health risk",
+          "description_NO": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "description_EN": "Children, pregnant, sick and older people should limit outdoor activities",
+          "description_NN": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "color": "#C13500"
+        },
+        {
+          "class": 4,
+          "from": 150.0,
+          "text": "very high",
+          "text_NO": "svært høy",
+          "short_description_NO": "alvorlig helserisiko",
+          "short_description_EN": "serious health risk",
+          "description_NO": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "description_EN": "Try not to stay outside for longer periods. In particular, children, pregnant, sick and olderly people must be careful.",
+          "description_NN": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "color": "#4900AC"
+        }
+      ],
+      "sources": [
+        {
+          "nameNO": "langtransportert",
+          "nameEN": "long-transport",
+          "units": "%",
+          "source": "pm10_nonlocal_fraction"
+        },
+        {
+          "nameNO": "sjøsalt",
+          "nameEN": "seasalt",
+          "units": "%",
+          "source": "pm10_nonlocal_fraction_seasalt"
+        },
+        {
+          "nameNO": "eksos",
+          "nameEN": "exhaust",
+          "units": "%",
+          "source": "pm10_local_fraction_traffic_exhaust"
+        },
+        {
+          "nameNO": "veistøv",
+          "nameEN": "roaddust",
+          "units": "%",
+          "source": "pm10_local_fraction_traffic_nonexhaust"
+        },
+        {
+          "nameNO": "skip",
+          "nameEN": "shipping",
+          "units": "%",
+          "source": "pm10_local_fraction_shipping"
+        },
+        {
+          "nameNO": "vedfyring",
+          "nameEN": "wood-burning",
+          "units": "%",
+          "source": "pm10_local_fraction_heating"
+        },
+        {
+          "nameNO": "industri",
+          "nameEN": "industry",
+          "units": "%",
+          "source": "pm10_local_fraction_industry"
+        }
+      ]
+    },
+    "no2_concentration": {
+      "units": "µg/m³",
+      "nameNO": "NO₂",
+      "nameEN": "NO₂",
+      "aqi_formula": "\nfunction(x) {\n    let aqi = 1;\n    if ( x < 0. ) {\n        aqi = 1.\n    } else if ( x < 100.0 ) {\n        aqi = (x / 100.0) + 1.;\n    } else if ( x < 200.0 ) {\n        aqi = ((x - 100.0) / (200.0 - 100.0)) + 2.;\n    } else if ( x < 400.0 ) {\n        aqi = ((x - 200.0) / (400.0 - 200.0)) + 3.;\n    } else {\n        aqi = (x / 400.0) + 3.;\n    }\n    \n    if ( aqi > 4.999 ) {\n        aqi = 4.999;\n    }\n    \n    return aqi;\n}\n",
+      "aqis": [
+        {
+          "class": 1,
+          "to": 100.0,
+          "wms_colors": [
+            "#1A801A",
+            "#238718",
+            "#2D8F16",
+            "#369715",
+            "#409F13",
+            "#49A712",
+            "#53AE10",
+            "#5CB60E",
+            "#66BE0D",
+            "#70C60B",
+            "#79CE0A",
+            "#83D508",
+            "#8CDD06",
+            "#96E505",
+            "#9FED03",
+            "#A9F502"
+          ],
+          "wms_minmax": [
+            0.0,
+            100.0
+          ],
+          "text": "low",
+          "text_NO": "lite",
+          "short_description_NO": "liten helserisiko",
+          "short_description_EN": "little health risk",
+          "description_NO": "Det er lite luftforurensning",
+          "description_EN": "Only light air-pollution",
+          "description_NN": "Det er lite luftforurensning",
+          "color": "#3F9F41"
+        },
+        {
+          "class": 2,
+          "from": 100.0,
+          "to": 200.0,
+          "wms_colors": [
+            "#FFFF00",
+            "#FFF902",
+            "#FFF203",
+            "#FFEC05",
+            "#FFE606",
+            "#FFDF08",
+            "#FFD90A",
+            "#FFD20B",
+            "#FFCC0D",
+            "#FFC60E",
+            "#FFBF10",
+            "#FFB912",
+            "#FFB313",
+            "#FFAC15",
+            "#FFA616",
+            "#FF9F18"
+          ],
+          "wms_minmax": [
+            100.0,
+            200.0
+          ],
+          "text": "medium",
+          "text_NO": "moderat",
+          "short_description_NO": "moderat helserisiko",
+          "short_description_EN": "moderate health risk",
+          "description_NO": "Utendørs aktivitet anbefales for de fleste",
+          "description_EN": "Outside activities recommended for most",
+          "description_NN": "Utendørs aktivitet anbefales for de fleste",
+          "color": "#FFCB00"
+        },
+        {
+          "class": 3,
+          "from": 200.0,
+          "to": 400.0,
+          "wms_colors": [
+            "#FF591A",
+            "#FC571B",
+            "#F9551D",
+            "#F5531E",
+            "#F25120",
+            "#EF4F21",
+            "#EC4D23",
+            "#E94B25",
+            "#E64926",
+            "#E24728",
+            "#DF4529",
+            "#DC432B",
+            "#D9412D",
+            "#D63F2E",
+            "#D23D30",
+            "#CF3B31",
+            "#CC3933",
+            "#C93735",
+            "#C63536",
+            "#C23338",
+            "#BF3139",
+            "#BC2F3B",
+            "#B92D3D",
+            "#B62B3E",
+            "#B32940",
+            "#AF2741",
+            "#AC2543",
+            "#A92345",
+            "#A62146",
+            "#A31F48",
+            "#9F1D49",
+            "#9C1B4B"
+          ],
+          "wms_minmax": [
+            200.0,
+            400.0
+          ],
+          "text": "high",
+          "text_NO": "høy",
+          "short_description_NO": "betydelig helserisiko",
+          "short_description_EN": "high health risk",
+          "description_NO": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "description_EN": "Children, pregnant, sick and older people should limit outdoor activities",
+          "description_NN": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "color": "#C13500"
+        },
+        {
+          "class": 4,
+          "from": 400.0,
+          "wms_colors": [
+            "#B300B3",
+            "#AB00B3",
+            "#A300B3",
+            "#9B00B3",
+            "#9300B3",
+            "#8B00B3",
+            "#8300B3",
+            "#7B00B3",
+            "#7300B3",
+            "#6B00B3",
+            "#6300B3",
+            "#5B00B3",
+            "#5300B3",
+            "#4B00B3",
+            "#4300B3",
+            "#3B00B3"
+          ],
+          "wms_minmax": [
+            400.0,
+            500.0
+          ],
+          "text": "very high",
+          "text_NO": "svært høy",
+          "short_description_NO": "alvorlig helserisiko",
+          "short_description_EN": "serious health risk",
+          "description_NO": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "description_EN": "Try not to stay outside for longer periods. In particular, children, pregnant, sick and olderly people must be careful.",
+          "description_NN": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "color": "#4900AC"
+        }
+      ],
+      "sources": [
+        {
+          "nameNO": "langtransportert",
+          "nameEN": "long-transport",
+          "units": "%",
+          "source": "no2_nonlocal_fraction"
+        },
+        {
+          "nameNO": "sjøsalt",
+          "nameEN": "seasalt",
+          "units": "%",
+          "source": "no2_nonlocal_fraction_seasalt"
+        },
+        {
+          "nameNO": "eksos",
+          "nameEN": "exhaust",
+          "units": "%",
+          "source": "no2_local_fraction_traffic_exhaust"
+        },
+        {
+          "nameNO": "veistøv",
+          "nameEN": "roaddust",
+          "units": "%",
+          "source": "no2_local_fraction_traffic_nonexhaust"
+        },
+        {
+          "nameNO": "skip",
+          "nameEN": "shipping",
+          "units": "%",
+          "source": "no2_local_fraction_shipping"
+        },
+        {
+          "nameNO": "vedfyring",
+          "nameEN": "wood-burning",
+          "units": "%",
+          "source": "no2_local_fraction_heating"
+        },
+        {
+          "nameNO": "industri",
+          "nameEN": "industry",
+          "units": "%",
+          "source": "no2_local_fraction_industry"
+        }
+      ]
+    },
+    "so2_concentration": {
+      "units": "µg/m³",
+      "nameNO": "SO₂",
+      "nameEN": "SO₂",
+      "aqi_formula": "\nfunction(x) {\n    let aqi = 1;\n    if ( x < 0. ) {\n        aqi = 1.\n    } else if ( x < 100.0 ) {\n        aqi = (x / 100.0) + 1.;\n    } else if ( x < 350.0 ) {\n        aqi = ((x - 100.0) / (350.0 - 100.0)) + 2.;\n    } else if ( x < 500.0 ) {\n        aqi = ((x - 350.0) / (500.0 - 350.0)) + 3.;\n    } else {\n        aqi = (x / 500.0) + 3.;\n    }\n    \n    if ( aqi > 4.999 ) {\n        aqi = 4.999;\n    }\n    \n    return aqi;\n}\n",
+      "aqis": [
+        {
+          "class": 1,
+          "to": 100.0,
+          "text": "low",
+          "text_NO": "lite",
+          "short_description_NO": "liten helserisiko",
+          "short_description_EN": "little health risk",
+          "description_NO": "Det er lite luftforurensning",
+          "description_EN": "Only light air-pollution",
+          "description_NN": "Det er lite luftforurensning",
+          "color": "#3F9F41"
+        },
+        {
+          "class": 2,
+          "from": 100.0,
+          "to": 350.0,
+          "text": "medium",
+          "text_NO": "moderat",
+          "short_description_NO": "moderat helserisiko",
+          "short_description_EN": "moderate health risk",
+          "description_NO": "Utendørs aktivitet anbefales for de fleste",
+          "description_EN": "Outside activities recommended for most",
+          "description_NN": "Utendørs aktivitet anbefales for de fleste",
+          "color": "#FFCB00"
+        },
+        {
+          "class": 3,
+          "from": 350.0,
+          "to": 500.0,
+          "text": "high",
+          "text_NO": "høy",
+          "short_description_NO": "betydelig helserisiko",
+          "short_description_EN": "high health risk",
+          "description_NO": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "description_EN": "Children, pregnant, sick and older people should limit outdoor activities",
+          "description_NN": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "color": "#C13500"
+        },
+        {
+          "class": 4,
+          "from": 500.0,
+          "text": "very high",
+          "text_NO": "svært høy",
+          "short_description_NO": "alvorlig helserisiko",
+          "short_description_EN": "serious health risk",
+          "description_NO": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "description_EN": "Try not to stay outside for longer periods. In particular, children, pregnant, sick and olderly people must be careful.",
+          "description_NN": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "color": "#4900AC"
+        }
+      ],
+      "sources": [
+        {
+          "nameNO": "langtransportert",
+          "nameEN": "long-transport",
+          "units": "%",
+          "source": "so2_nonlocal_fraction"
+        },
+        {
+          "nameNO": "sjøsalt",
+          "nameEN": "seasalt",
+          "units": "%",
+          "source": "so2_nonlocal_fraction_seasalt"
+        },
+        {
+          "nameNO": "eksos",
+          "nameEN": "exhaust",
+          "units": "%",
+          "source": "so2_local_fraction_traffic_exhaust"
+        },
+        {
+          "nameNO": "veistøv",
+          "nameEN": "roaddust",
+          "units": "%",
+          "source": "so2_local_fraction_traffic_nonexhaust"
+        },
+        {
+          "nameNO": "skip",
+          "nameEN": "shipping",
+          "units": "%",
+          "source": "so2_local_fraction_shipping"
+        },
+        {
+          "nameNO": "vedfyring",
+          "nameEN": "wood-burning",
+          "units": "%",
+          "source": "so2_local_fraction_heating"
+        },
+        {
+          "nameNO": "industri",
+          "nameEN": "industry",
+          "units": "%",
+          "source": "so2_local_fraction_industry"
+        }
+      ]
+    },
+    "o3_concentration": {
+      "units": "µg/m³",
+      "nameNO": "Ozon",
+      "nameEN": "Ozone",
+      "aqi_formula": "\nfunction(x) {\n    let aqi = 1;\n    if ( x < 0. ) {\n        aqi = 1.\n    } else if ( x < 100.0 ) {\n        aqi = (x / 100.0) + 1.;\n    } else if ( x < 180.0 ) {\n        aqi = ((x - 100.0) / (180.0 - 100.0)) + 2.;\n    } else if ( x < 240.0 ) {\n        aqi = ((x - 180.0) / (240.0 - 180.0)) + 3.;\n    } else {\n        aqi = (x / 240.0) + 3.;\n    }\n    \n    if ( aqi > 4.999 ) {\n        aqi = 4.999;\n    }\n    \n    return aqi;\n}\n",
+      "aqis": [
+        {
+          "class": 1,
+          "to": 100.0,
+          "wms_colors": [
+            "#1A801A",
+            "#218618",
+            "#298C17",
+            "#309216",
+            "#389814",
+            "#409F13",
+            "#47A512",
+            "#4FAB11",
+            "#57B10F",
+            "#5EB80E",
+            "#66BE0D",
+            "#6EC40B",
+            "#75CA0A",
+            "#7DD109",
+            "#85D708",
+            "#8CDD06",
+            "#94E305",
+            "#9CEA04",
+            "#A3F003",
+            "#ABF601"
+          ],
+          "wms_minmax": [
+            0.0,
+            100.0
+          ],
+          "text": "low",
+          "text_NO": "lite",
+          "short_description_NO": "liten helserisiko",
+          "short_description_EN": "little health risk",
+          "description_NO": "Det er lite luftforurensning",
+          "description_EN": "Only light air-pollution",
+          "description_NN": "Det er lite luftforurensning",
+          "color": "#3F9F41"
+        },
+        {
+          "class": 2,
+          "from": 100.0,
+          "to": 180.0,
+          "wms_colors": [
+            "#FFFF00",
+            "#FFF902",
+            "#FFF203",
+            "#FFEC05",
+            "#FFE606",
+            "#FFDF08",
+            "#FFD90A",
+            "#FFD20B",
+            "#FFCC0D",
+            "#FFC60E",
+            "#FFBF10",
+            "#FFB912",
+            "#FFB313",
+            "#FFAC15",
+            "#FFA616",
+            "#FF9F18"
+          ],
+          "wms_minmax": [
+            100.0,
+            180.0
+          ],
+          "text": "medium",
+          "text_NO": "moderat",
+          "short_description_NO": "moderat helserisiko",
+          "short_description_EN": "moderate health risk",
+          "description_NO": "Utendørs aktivitet anbefales for de fleste",
+          "description_EN": "Outside activities recommended for most",
+          "description_NN": "Utendørs aktivitet anbefales for de fleste",
+          "color": "#FFCB00"
+        },
+        {
+          "class": 3,
+          "from": 180.0,
+          "to": 240.0,
+          "wms_colors": [
+            "#FF591A",
+            "#F7541E",
+            "#EE4F22",
+            "#E64926",
+            "#DD442B",
+            "#D43F2F",
+            "#CC3933",
+            "#C33437",
+            "#BB2F3B",
+            "#B32940",
+            "#AA2444",
+            "#A21F48"
+          ],
+          "wms_minmax": [
+            180.0,
+            240.0
+          ],
+          "text": "high",
+          "text_NO": "høy",
+          "short_description_NO": "betydelig helserisiko",
+          "short_description_EN": "high health risk",
+          "description_NO": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "description_EN": "Children, pregnant, sick and older people should limit outdoor activities",
+          "description_NN": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "color": "#C13500"
+        },
+        {
+          "class": 4,
+          "from": 240.0,
+          "wms_colors": [
+            "#B300B3",
+            "#AF00B3",
+            "#AB00B3",
+            "#A700B3",
+            "#A300B3",
+            "#9F00B3",
+            "#9B00B3",
+            "#9700B3",
+            "#9300B3",
+            "#8F00B3",
+            "#8B00B3",
+            "#8700B3",
+            "#8300B3",
+            "#7F00B3",
+            "#7B00B3",
+            "#7700B3",
+            "#7300B3",
+            "#6F00B3",
+            "#6B00B3",
+            "#6700B3",
+            "#6300B3",
+            "#5F00B3",
+            "#5B00B3",
+            "#5700B3",
+            "#5300B3",
+            "#4F00B3",
+            "#4B00B3",
+            "#4700B3",
+            "#4300B3",
+            "#3F00B3",
+            "#3B00B3",
+            "#3700B3"
+          ],
+          "wms_minmax": [
+            240.0,
+            400.0
+          ],
+          "text": "very high",
+          "text_NO": "svært høy",
+          "short_description_NO": "alvorlig helserisiko",
+          "short_description_EN": "serious health risk",
+          "description_NO": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "description_EN": "Try not to stay outside for longer periods. In particular, children, pregnant, sick and olderly people must be careful.",
+          "description_NN": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "color": "#4900AC"
+        }
+      ],
+      "sources": [
+        {
+          "nameNO": "langtransportert",
+          "nameEN": "long-transport",
+          "units": "%",
+          "source": "o3_nonlocal_fraction"
+        },
+        {
+          "nameNO": "sjøsalt",
+          "nameEN": "seasalt",
+          "units": "%",
+          "source": "o3_nonlocal_fraction_seasalt"
+        },
+        {
+          "nameNO": "eksos",
+          "nameEN": "exhaust",
+          "units": "%",
+          "source": "o3_local_fraction_traffic_exhaust"
+        },
+        {
+          "nameNO": "veistøv",
+          "nameEN": "roaddust",
+          "units": "%",
+          "source": "o3_local_fraction_traffic_nonexhaust"
+        },
+        {
+          "nameNO": "skip",
+          "nameEN": "shipping",
+          "units": "%",
+          "source": "o3_local_fraction_shipping"
+        },
+        {
+          "nameNO": "vedfyring",
+          "nameEN": "wood-burning",
+          "units": "%",
+          "source": "o3_local_fraction_heating"
+        },
+        {
+          "nameNO": "industri",
+          "nameEN": "industry",
+          "units": "%",
+          "source": "o3_local_fraction_industry"
+        }
+      ]
+    },
+    "AQI": {
+      "nameNO": "AQI",
+      "nameEN": "AQI",
+      "aqi_formula": "\nfunction(x) {\n    let aqi = 1;\n    if ( x < 0. ) {\n        aqi = 1.\n    } else if ( x < 2.0 ) {\n        aqi = (x / 2.0) + 1.;\n    } else if ( x < 3.0 ) {\n        aqi = ((x - 2.0) / (3.0 - 2.0)) + 2.;\n    } else if ( x < 4.0 ) {\n        aqi = ((x - 3.0) / (4.0 - 3.0)) + 3.;\n    } else {\n        aqi = (x / 4.0) + 3.;\n    }\n    \n    if ( aqi > 4.999 ) {\n        aqi = 4.999;\n    }\n    \n    return aqi;\n}\n",
+      "aqis": [
+        {
+          "class": 1,
+          "to": 2.0,
+          "wms_colors": [
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34",
+            "#34AD34"
+          ],
+          "wms_minmax": [
+            1.0,
+            2.0
+          ],
+          "text": "low",
+          "text_NO": "lite",
+          "short_description_NO": "liten helserisiko",
+          "short_description_EN": "little health risk",
+          "description_NO": "Det er lite luftforurensning",
+          "description_EN": "Only light air-pollution",
+          "description_NN": "Det er lite luftforurensning",
+          "color": "#3F9F41"
+        },
+        {
+          "class": 2,
+          "from": 2.0,
+          "to": 3.0,
+          "wms_colors": [
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000",
+            "#FFE000"
+          ],
+          "wms_minmax": [
+            2.0,
+            3.0
+          ],
+          "text": "medium",
+          "text_NO": "moderat",
+          "short_description_NO": "moderat helserisiko",
+          "short_description_EN": "moderate health risk",
+          "description_NO": "Utendørs aktivitet anbefales for de fleste",
+          "description_EN": "Outside activities recommended for most",
+          "description_NN": "Utendørs aktivitet anbefales for de fleste",
+          "color": "#FFCB00"
+        },
+        {
+          "class": 3,
+          "from": 3.0,
+          "to": 4.0,
+          "wms_colors": [
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200",
+            "#D63200"
+          ],
+          "wms_minmax": [
+            3.0,
+            4.0
+          ],
+          "text": "high",
+          "text_NO": "høy",
+          "short_description_NO": "betydelig helserisiko",
+          "short_description_EN": "high health risk",
+          "description_NO": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "description_EN": "Children, pregnant, sick and older people should limit outdoor activities",
+          "description_NN": "Barn, gravide, syke og eldre bør vurdere begrenset utendørs fysisk aktivitet",
+          "color": "#C13500"
+        },
+        {
+          "class": 4,
+          "from": 4.0,
+          "wms_colors": [
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA",
+            "#5F00AA"
+          ],
+          "wms_minmax": [
+            4.0,
+            5.0
+          ],
+          "text": "very high",
+          "text_NO": "svært høy",
+          "short_description_NO": "alvorlig helserisiko",
+          "short_description_EN": "serious health risk",
+          "description_NO": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "description_EN": "Try not to stay outside for longer periods. In particular, children, pregnant, sick and olderly people must be careful.",
+          "description_NN": "Vurder å ikke oppholde deg utendørs i lengre perioder. Barn, gravide, syke og eldre må være spesielt forsiktige",
+          "color": "#4900AC"
+        }
+      ],
+      "sources": [
+        {
+          "nameNO": "langtransportert",
+          "nameEN": "long-transport",
+          "units": "%",
+          "source": "AQI_nonlocal_fraction"
+        },
+        {
+          "nameNO": "sjøsalt",
+          "nameEN": "seasalt",
+          "units": "%",
+          "source": "AQI_nonlocal_fraction_seasalt"
+        },
+        {
+          "nameNO": "eksos",
+          "nameEN": "exhaust",
+          "units": "%",
+          "source": "AQI_local_fraction_traffic_exhaust"
+        },
+        {
+          "nameNO": "veistøv",
+          "nameEN": "roaddust",
+          "units": "%",
+          "source": "AQI_local_fraction_traffic_nonexhaust"
+        },
+        {
+          "nameNO": "skip",
+          "nameEN": "shipping",
+          "units": "%",
+          "source": "AQI_local_fraction_shipping"
+        },
+        {
+          "nameNO": "vedfyring",
+          "nameEN": "wood-burning",
+          "units": "%",
+          "source": "AQI_local_fraction_heating"
+        },
+        {
+          "nameNO": "industri",
+          "nameEN": "industry",
+          "units": "%",
+          "source": "AQI_local_fraction_industry"
+        }
+      ]
+    }
+  }
+}

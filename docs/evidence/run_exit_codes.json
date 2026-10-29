@@ -1,0 +1,30 @@
+[
+  {
+    "label": "live",
+    "command": [
+      "python",
+      "scripts/run_demo.py",
+      "--source",
+      "live",
+      "--date",
+      "2026-10-28",
+      "--output",
+      "data/output/live_verified"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "fixture",
+    "command": [
+      "python",
+      "scripts/run_demo.py",
+      "--source",
+      "fixture",
+      "--date",
+      "2026-10-28",
+      "--output",
+      "data/output/fixture_verified"
+    ],
+    "exit_code": 0
+  }
+]

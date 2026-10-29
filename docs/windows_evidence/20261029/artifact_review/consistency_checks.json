@@ -1,0 +1,43 @@
+{
+  "checked_at_utc": "2026-10-29T17:37:49.427940+00:00",
+  "platform": "Linux x86_64",
+  "checks": {
+    "forecast_matches_historical_fixture": true,
+    "descriptor_matches_historical_fixture": true,
+    "all_context_hashes_match_current_context": true,
+    "saved_schema_matches_current_schema": true,
+    "prompt_reconstructs_from_current_context_and_facts": true,
+    "model_response_parses_to_saved_decision": true,
+    "completion_token_counts_agree": true,
+    "prompt_token_counts_agree": true,
+    "budget_arithmetic_and_caps": true,
+    "one_call_recorded": true,
+    "fourteen_distinct_passed_checks_recorded": true,
+    "coverage_24_recorded": true
+  },
+  "packaged_verifier": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-B",
+      "-m",
+      "src.verify",
+      "--output",
+      "docs/evidence/windows_run"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: saved output recomputed against saved source; no model call made\n"
+  },
+  "original_files_inspected": 14,
+  "unchanged_packaged_files": 13,
+  "redacted_fields": [
+    "agent_response.json:/model"
+  ],
+  "new_model_inference": false,
+  "new_live_data_fetch": false,
+  "assistant_executed_on_windows": false,
+  "limits": [
+    "Exact original execution timestamp and Windows build are not established.",
+    "Saved token counts were cross-checked; no independent model tokenizer or generation was run.",
+    "Host and model-binary provenance are not authenticated by these saved files."
+  ]
+}

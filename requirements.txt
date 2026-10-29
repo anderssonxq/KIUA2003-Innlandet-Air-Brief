@@ -1,0 +1,3 @@
+# Python 3.11+; the pipeline otherwise uses the standard library.
+# Windows has no system IANA timezone database. Verified on PyPI 2026-10-27.
+tzdata==2026.5
