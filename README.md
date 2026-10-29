@@ -1,7 +1,7 @@
 # Innlandet Air Brief
 
 **KIUA-2003 Compulsory 2: plan and walking skeleton**  
-Team: Brage Andersson and Alexandr Alohins
+Team: Brage Andersson and Aleksandr Alohins
 
 A Python workflow that turns MET Norway's Hamar air-quality forecast into a
 source-linked Norwegian draft bulletin. Five stages acquire data, validate a
