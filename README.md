@@ -32,15 +32,12 @@ context and evidence files when checking out the project on Windows or Linux.
 
 ## Windows setup — PowerShell
 
-After extracting the ZIP, enter the project directory:
+Extract or clone the repository, then open PowerShell in the project folder
+containing `README.md`, `requirements.txt`, `scripts` and `src`. Run the following
+commands from that folder.
 
-```powershell
-Set-Location .\innlandet-air-brief
-```
-
-Skip that command if already inside `innlandet-air-brief`. The current directory
-must contain `README.md`, `requirements.txt`, `scripts` and `src`. Create the
-virtual environment here; activation and execution-policy changes are unnecessary.
+Create the virtual environment here; activation and execution-policy changes
+are unnecessary.
 
 ```powershell
 py -3 --version
@@ -51,8 +48,8 @@ py -3 -m venv .venv
 
 The setup helper downloads **llama.cpp b11669** and
 **Qwen2.5-0.5B-Instruct Q4_K_M** into `.runtime/`. The publisher downloads are
-pinned by SHA-256; a mismatch stops setup. Binaries are excluded from Git and
-this ZIP. `tzdata`, installed from `requirements.txt`, supplies the Europe/Oslo
+pinned by SHA-256; a mismatch stops setup. Binaries are excluded from the
+repository. `tzdata`, installed from `requirements.txt`, supplies the Europe/Oslo
 timezone database on Windows.
 
 ## Run the complete workflow
