@@ -1,35 +1,65 @@
-name: Test Python on Linux
+name: Test Air Brief on Linux
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  test:
+  linux-tests:
+    name: Linux tests and complete fixture run
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      PYTHONUNBUFFERED: "1"
 
     steps:
-      
-name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
-      
-name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
 
-      
-name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Show Linux and Python versions
+        run: |
+          uname -a
+          python --version
 
-      
-name: Run unit tests
-      run: python -m unittest discover -s tests -v
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
 
-      
-name: Run project
-      run: python run.py --mode fixture
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run deterministic evaluation
+        run: python -m src.evaluate --output data/output/ci-evaluation
+
+      - name: Verify saved Linux and Windows evidence
+        run: |
+          python -m src.verify --output docs/evidence/live_run
+          python -m src.verify --output docs/evidence/windows_run
+
+      - name: Download pinned local model and runtime
+        run: python scripts/setup_runtime.py
+
+      - name: Run complete workflow on Linux
+        run: |
+          python scripts/run_demo.py \
+            --source fixture \
+            --date 2026-10-28 \
+            --output data/output/linux-ci
+
+      - name: Verify and display the new bulletin
+        run: |
+          python -m src.verify --output data/output/linux-ci
+          cat data/output/linux-ci/bulletin.md
